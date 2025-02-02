@@ -55,8 +55,10 @@
             fetch(sheetUrl)
                 .then(response => response.text())
                 .then(data => {
-                    var jsonData = JSON.parse(data.substring(47).slice(0, -2));  // แปลง JSON ที่รับมา
-                    var seriesData = jsonData.table.rows;
+                    // แปลงข้อมูล JSON ที่ดึงมา
+                    var jsonData = JSON.parse(data.substring(47).slice(0, -2));  // ตัดข้อมูลที่ไม่จำเป็นออก
+
+                    var seriesData = jsonData.table.rows;  // ดึงข้อมูลจาก Google Sheets
 
                     // แสดงข้อมูลซีรีส์
                     var seriesList = document.getElementById('series-list');
@@ -79,7 +81,7 @@
                             </a>
                         `;
                         
-                        seriesList.appendChild(seriesItem);
+                        seriesList.appendChild(seriesItem);  // เพิ่มซีรีส์เข้าในหน้าเว็บ
                     });
                 })
                 .catch(error => console.error('Error fetching data:', error));
