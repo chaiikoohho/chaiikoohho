@@ -50,7 +50,7 @@
       google.charts.setOnLoadCallback(drawTable);
 
       function drawTable() {
-        var sheetId = "your_google_sheet_id"; // ใส่ ID ของ Google Sheets ที่คุณต้องการใช้
+        var sheetId = "1D7DUdSgjztrfsDiJewq_l4TmmqO_E7EkRwreNY0GCG8"; // ใส่ ID ของ Google Sheets ที่คุณต้องการใช้
         var queryString =
           encodeURIComponent("SELECT A, B") +
           "&tqx=out:json"; // SELECT ชื่อซีรีส์และโปสเตอร์จาก Sheet1
@@ -89,7 +89,7 @@
         }
 
         // ดึงข้อมูลจาก Sheet2 (ซีซั่นและตอน)
-        var sheetId = "your_google_sheet_id"; // ใส่ ID ของ Google Sheets ที่คุณต้องการใช้
+        var sheetId = "1D7DUdSgjztrfsDiJewq_l4TmmqO_E7EkRwreNY0GCG8"; // ใส่ ID ของ Google Sheets ที่คุณต้องการใช้
         var queryString2 =
           encodeURIComponent("SELECT A, B, C, D, E") + "&tqx=out:json"; // SELECT ข้อมูลจาก Sheet2
         var dataSourceUrl2 =
